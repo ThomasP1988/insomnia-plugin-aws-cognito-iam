@@ -13,7 +13,7 @@ into the "", start to type AWS Cognito IAM, click on the popover and start to fi
 
 Once this is done,
 
-in your request, click on headers, and add a new header named "InsomniaPluginAWSIAM" and a value start to type your JSON property name (here: DEV_ADMIN) click on it.
+in your request, click on headers, and add a new header named "InsomniaPluginAWSIAM" and as value start to type your JSON property name (here: DEV_ADMIN) click on it.
 
 
 
