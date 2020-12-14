@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-aws-cognito-iam",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Plugin to send request to API Gateway with AWS Cognito and AWS IAM authorization type",
   "main": "./src/index.js",
   "scripts": {
@@ -23,6 +23,17 @@
       "name": "ThomasP1988"
     }
   },
+  "keywords": [
+    "insomnia",
+    "plugin",
+    "aws",
+    "cognito",
+    "identity",
+    "sign",
+    "v4",
+    "iam",
+    "serverless"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ThomasP1988/insomnia-plugin-aws-cognito-iam.git"
