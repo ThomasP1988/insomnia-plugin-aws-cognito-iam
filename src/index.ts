@@ -1,5 +1,5 @@
 import * as AWS from 'aws-sdk';
-import Amplify, { Auth } from 'aws-amplify';
+import { Auth } from '@aws-amplify/auth';
 import { Signer, ICredentials } from "@aws-amplify/core";
 import { CognitoUser } from 'amazon-cognito-identity-js';
 
@@ -89,13 +89,11 @@ const run = async (context: Insomnia.Context,
     }
 
     if (!users[key] || creds?.expired) {
-        Amplify.configure({
-            Auth: {
-                region: Region,
-                identityPoolId: IdentityPoolId,
-                userPoolId: UserPoolId,
-                userPoolWebClientId: ClientId
-            }
+        Auth.configure({
+            region: Region,
+            identityPoolId: IdentityPoolId,
+            userPoolId: UserPoolId,
+            userPoolWebClientId: ClientId
         });
 
         try {
