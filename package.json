@@ -23,6 +23,10 @@
       "name": "ThomasP1988"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThomasP1988/insomnia-plugin-aws-cognito-iam.git"
+  },
   "dependencies": {
     "aws-amplify": "^3.3.12"
   }
