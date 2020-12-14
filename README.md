@@ -7,7 +7,7 @@ Plugin to send request to API Gateway with AWS Cognito and AWS IAM authorization
 
  Go to "Manage Environements", 
 
- 
+
  ![Define environement](/doc/img/manage-environement.png)
  
  then in the JSON, add your different user:
@@ -18,7 +18,7 @@ into the "", start to type AWS Cognito IAM, click on the popover and start to fi
  ## 2. fill the header and send you request ##
 Once this is done,
 
-in your request, click on headers, and add a new header named "InsomniaPluginAWSIAM" and as value start to type your JSON property name (here: user.DEV_ADMIN) click on it.
+in your request, click on headers, and add a new header named "InsomniaPluginAWSIAM" and as value start to type your JSON property name (here: users.DEV_ADMIN) click on it.
 
 ![header and timeline](/doc/img/header.png)
 
