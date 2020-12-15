@@ -1,7 +1,7 @@
-import * as AWS from 'aws-sdk';
 import { Auth } from '@aws-amplify/auth';
 import { Signer, ICredentials } from "@aws-amplify/core";
 import { CognitoUser } from 'amazon-cognito-identity-js';
+import * as AWS from 'aws-sdk';
 
 const users: { [id: string]: { user: CognitoUser, credentials: ICredentials } } = {};
 

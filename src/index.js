@@ -10,9 +10,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.templateTags = exports.requestHooks = void 0;
-const AWS = require("aws-sdk");
-const aws_amplify_1 = require("aws-amplify");
+const auth_1 = require("@aws-amplify/auth");
 const core_1 = require("@aws-amplify/core");
+const AWS = require("aws-sdk");
 const users = {};
 const HEADER_FLAG = "InsomniaPluginAWSIAM";
 exports.requestHooks = [(context) => __awaiter(void 0, void 0, void 0, function* () {
@@ -75,18 +75,16 @@ const run = (context, Username, Password, Region, IdentityPoolId, UserPoolId, Cl
         creds = new AWS.Credentials(accessKeyId, secretAccessKey, sessionToken);
     }
     if (!users[key] || (creds === null || creds === void 0 ? void 0 : creds.expired)) {
-        aws_amplify_1.default.configure({
-            Auth: {
-                region: Region,
-                identityPoolId: IdentityPoolId,
-                userPoolId: UserPoolId,
-                userPoolWebClientId: ClientId
-            }
+        auth_1.Auth.configure({
+            region: Region,
+            identityPoolId: IdentityPoolId,
+            userPoolId: UserPoolId,
+            userPoolWebClientId: ClientId
         });
         try {
             users[key] = {
-                user: yield aws_amplify_1.Auth.signIn(Username, Password),
-                credentials: yield aws_amplify_1.Auth.currentCredentials()
+                user: yield auth_1.Auth.signIn(Username, Password),
+                credentials: yield auth_1.Auth.currentCredentials()
             };
         }
         catch (e) {
