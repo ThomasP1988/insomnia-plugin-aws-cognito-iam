@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-aws-cognito-iam",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Plugin to send request to API Gateway with AWS Cognito and AWS IAM authorization type",
   "main": "./src/index.js",
   "scripts": {

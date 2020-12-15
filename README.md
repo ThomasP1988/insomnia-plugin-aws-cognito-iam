@@ -1,3 +1,4 @@
+# This Plugin will work only in early 2021 when the next version of Insomnia will be release
 
 Plugin to send request to API Gateway with AWS Cognito and AWS IAM authorization type
 
